@@ -148,9 +148,86 @@ fun main() {
 
 
     // Collections: Set
+    val immutableSet = setOf<String>("Chocolate","Vanilla","chocolate")
+    val mutableSet = mutableSetOf("Butterscotch","Strawberry")
+    // one way to test membership
+    val hasChocolate1 = "chocolate" in immutableSet
+    // another way
+    val hasChocolate2 = immutableSet.contains("chocolate")
+    mutableSet.add("green tea") // add item
+    //delete by value
+    val flavorWasRemoved = mutableSet.remove("strawberry")
 
 
 
+
+    // Control flow: loops
+    for(item in immutableList){
+        println(item)
+    }
+    //iterate over map
+    for ((key,value) in mutableMap){
+        println("$key -> $value")
+    }
+
+    // iterating over ranges
+    for(i in 0..10){
+        print(i)
+    }
+    println()
+    for(i in 11 until 20){
+        print(i)
+    }
+    println()
+    for(i in 10 downTo 1){
+        print("$i \t")
+    }
+    println()
+
+    // while and do-while
+
+    var t = 0;
+    while(t < 10){
+        t++
+        print(t)
+    }
+    println()
+
+    do{
+        t--
+        print(t)
+    }while(t > 0)
+    println()
+
+
+
+
+    // Functions
+    fun sayHi(){
+        println("Hello")
+    }
+    sayHi()
+
+    fun sayHello(name: String){
+        println("Hello, $name!")
+    }
+    sayHello("AJ")
+
+    // default parameters
+    fun sayFriendlyHello(name: String = "Friend"){
+        print("Hello, $name!")
+    }
+    sayFriendlyHello()
+    println()
+
+    // function with mix of regular and default arguments
+    fun createCat(name: String = "Kitty", age: Int, isSpayed: Boolean = false){
+        print("$name / $age / $isSpayed")
+    }
+    createCat(age = 2)
+    println()
+    createCat("Fluffy", 3, true)
+    println()
 
 
 
