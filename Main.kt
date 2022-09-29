@@ -229,6 +229,36 @@ fun main() {
     createCat("Fluffy", 3, true)
     println()
 
+    // function with parameters and return value
+    fun total(x: Int, y: Int): Int{
+        return x + y
+    }
+    println(total(4,4))
+
+    // single line expression function
+    fun product(x: Int, y: Int) = x * y
+    println(product(9,9))
+
+    // a function that accepts another function
+    fun doMath(mathOperation: (Int, Int) -> Int, a: Int, b: Int): Int{
+        return mathOperation(a,b)
+    }
+
+    // calling a function that accepts another function
+    val add = doMath(::total, 2, 3)
+    val multiply = doMath(::product,2 ,3)
+    println(add)
+    println(multiply)
+
+
+
+
+    // LAMBDAS
+    val adder: (Int, Int) -> Int = {x, y -> x + y}
+    // Lambda with single parameter: it keyword
+    val square: (Int) -> Int = {it * it}
+    // passing a lambda to a function
+    val addWithLambda = doMath(adder, 2, 3)
 
 
 
