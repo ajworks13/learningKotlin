@@ -263,6 +263,40 @@ fun main() {
 
 
 
+    // Objects
+    /*
+    object Constants{
+        const val baseUrl = "http://duckduckgo.com"
+    }
+    */
+
+    /*
+    class Spaceship(var name: String, val size: Int){
+        var speed: Int = 0
+        fun fly(){
+            speed = 100
+        }
+        fun isFlying(): Boolean{
+            return speed > 0
+        }
+        // companion object replaces static members
+        companion object{
+            fun newSpaceship(): Spaceship{
+                return Spaceship("Falcon", 25)
+            }
+        }
+    }
+    */
+
+
+
+
+
+
+
+
+    
+
 
 
 
